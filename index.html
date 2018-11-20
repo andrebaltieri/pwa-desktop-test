@@ -1,9 +1,11 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8">
     <title>balta.io</title>
+    <meta name="Description" content="Aprenda PWA com balta.io">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#8627d2" />
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i" rel="stylesheet">
@@ -12,11 +14,11 @@
 </head>
 
 <body class="background">
-    <div>
+    <main>
         <img src="images/logo-2-branco.png" width="350" alt="balta.io" class="animated pulse infinite">
         <br><br>
-        <a id="btnSave" href="http://balta.io/curso/1973" target="_blank">QUERO APRENDER PWA</a>
-    </div>
+        <a href="http://balta.io/curso/1973" target="_blank" rel="noopener">QUERO APRENDER PWA</a>
+    </main>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js', {
