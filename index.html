@@ -32,8 +32,9 @@
     <main>
         <img src="images/logo-2-branco.png" width="350" alt="balta.io" class="animated pulse infinite">
         <br><br>
-        <a href="http://balta.io/curso/1973" target="_blank" rel="noopener">QUERO APRENDER PWA</a>
+        <a href="#" onclick="addToHomeScreen()">ADICIONAR A TELA INICIAL</a>
     </main>
+
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js', {
@@ -46,6 +47,33 @@
                 console.log('Service Worker Ready');
             });
         }
+
+        var deferredPrompt;
+
+        window.addEventListener('beforeinstallprompt', function (e) {
+            e.preventDefault();
+            deferredPrompt = e;
+        });
+
+        function addToHomeScreen() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice
+                    .then(function (choiceResult) {
+                        if (choiceResult.outcome === 'accepted') {
+                            console.log('Aceitou instalar');
+                        } else {
+                            console.log('Não aceitou installar');
+                        }
+                        deferredPrompt = null;
+                    });
+            }
+
+        }
+
+        window.addEventListener('appinstalled', function (evt) {
+            console.log('balta.io', 'installed');
+        });
     </script>
 </body>
 
