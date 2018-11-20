@@ -51,7 +51,7 @@
         var deferredPrompt;
 
         window.addEventListener('beforeinstallprompt', function (e) {
-            e.preventDefault();
+            //e.preventDefault();
             deferredPrompt = e;
         });
 
@@ -60,6 +60,7 @@
                 deferredPrompt.prompt();
                 deferredPrompt.userChoice
                     .then(function (choiceResult) {
+                        console.log(choiceResult);
                         if (choiceResult.outcome === 'accepted') {
                             console.log('Aceitou instalar');
                         } else {
