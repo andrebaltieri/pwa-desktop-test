@@ -1,4 +1,4 @@
-const version = "0.0.2";
+const version = "0.0.3";
 const cacheName = `balta-${version}`;
 self.addEventListener('install', e => {
   e.waitUntil(
