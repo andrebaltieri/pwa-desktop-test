@@ -1,0 +1,24 @@
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    text-align: center;
+    background: #3023ae;
+    background: -moz-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+    background: -webkit-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+    background: linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=1);
+}
+
+a {
+    background-color: #FE508E;
+    text-decoration: none;
+    padding: 20px;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-right: 50px;
+}
